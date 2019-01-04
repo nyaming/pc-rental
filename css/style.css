@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------
+	リセットCSS
+----------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------
+	全体設定
+----------------------------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.0rem;
+  letter-spacing: 2px;
+  font-feature-settings: "palt";
+}
+
+/* -----------------------------------------------------------
+	ヘッダー
+----------------------------------------------------------- */
+.header {
+  width: 100%;
+  height: 89px;
+  background-color: #fff;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.site_logo {
+  width: 194px;
+  height: 50px;
+  background: url("../images/logo.png") no-repeat;
+  background-size: contain;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+.site_logo a {
+  display: block;
+  height: 100%;
+}
+.header_nav ul {
+  margin: 0 10px;
+}
+.header_nav ul li {
+  display: inline-block;
+}
+.header_nav ul li a {
+  padding: 8px;
+  color: #221f20;
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: 0.25s;
+}
+.header_nav ul li a:hover {
+  background-color: #1E4A99;
+  color: #fff;
+}
+.inquiry {
+  display: inline-block;
+  width: 139px;
+  height: 49px;
+  line-height: 49px;
+  border-radius: 26px;
+  background-color: #eb4685;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  transition: 0.25s;
+}
+.inquiry i {
+  margin-left: 15px;
+}
+.inquiry:hover {
+  background-color: #EC81A6;
+}
+/* -----------------------------------------------------------
+	ヒーロー
+----------------------------------------------------------- */
+.main {
+  display: block;
+  margin-top: 89px;
+  z-index: 1;
+}
+
+.hero {
+  width: 100%;
+  height: 658px;
+  position: relative;
+  padding: 100px 0 45px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero .hero_wrap {
+  width: 100%;
+  height: 100%;
+  transform: skewX(-15deg);
+  position: absolute;
+  top: 0;
+  left: 15%;
+  overflow: hidden;
+  z-index: -1;
+}
+.hero .hero_wrap .bg {
+  width: 100%;
+  height: 100%;
+  transform: skewX(15deg);
+  position: absolute;
+  left: -90px;
+}
+.hero .hero_wrap .bg::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg_main.jpg")no-repeat center center;
+  background-size: cover;
+}
+.box_title {
+
+  padding: 23px 80px 30px 50px;
+  position: relative;
+  display: inline-block;
+}
+.box_title .catch span {
+  color: #ffe600;
+  font-size: 3.0rem;
+  font-weight: bold;
+  transform: rotate(-9deg);
+  transform-origin: left bottom;
+  display: inline-block;
+  margin-right: -2.5em;
+  white-space: nowrap;
+}
+.box_title .catch {
+  font-size: 2.0rem;
+
+}
+.box_title .title {
+  font-size: 6.2rem;
+  font-weight: bold;
+  text-shadow: 0px 0px 18px #555;
+  font-style: italic;
+  line-height: 1.2;
+}
+.box_title em {
+  font-size: 3.8rem;
+}
+.box_title .att {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+.box_title::after {
+  content: "";
+  display: block;
+  width: 150%;
+  height: 100%;
+  background-color: rgba(239, 38, 109, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewX(-15deg);
+}
+.box_main {
+  text-align: center;
+  margin-top: 10px;
+}
+.box_main .catch {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8;
+  text-shadow: 0px 0px 18px #555;
+}
+.box_main .catch em {
+  font-size: 2.6rem;
+}
+.box_main .inquiry {
+  margin-top: 30px;
+  font-size: 1.9rem;
+  width: 300px;
+  height: 58px;
+  line-height: 58px;
+  border-radius: 29px;
+}
+/* -----------------------------------------------------------
+	プロブレム
+----------------------------------------------------------- */
+.problem {
+  padding-top: 80px;
+}
+.problem .inner {
+  width: 800px;
+  margin: 0 auto;
+}
+.problem .title {
+  font-size: 3.0rem;
+  color: #1e4a99;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.problem .title strong {
+  font-size: 4.0rem;
+  background: linear-gradient(transparent 46%, #FFE600 46%);
+}
+.problem .problem_list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5%;
+}
+.problem .problem_list li {
+  padding: 40px 20px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 5%;
+  width: 45%;
+}
+.problem .problem_list li.wide {
+  width: 95%;
+}
+.problem .problem_list li .tag {
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #6180B8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2.1rem;
+  position: absolute;
+  left: -20px;
+  top: -15px;
+  transform: rotate(-15deg);
+}
+.problem .problem_list li .tag span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: #6180B8;
+  background-color: #fff;
+  text-align: center;
+  margin-left: 5px;
+}
+.problem .problem_list li .desc {
+  font-size:1.8rem;
+  color: #646263;
+}
+.problem .problem_list li .desc span {
+  font-size:2.0rem;
+  font-weight: bold;
+  background: linear-gradient(transparent 46%, #FFFACC 46%);
+}
+
+
+.test {
+  height: 2000px;
+}
