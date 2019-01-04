@@ -71,12 +71,18 @@ body {
   height: 89px;
   background-color: #fff;
   padding: 0 30px;
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
+}
+.header_wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 .site_logo {
   width: 194px;
@@ -144,6 +150,8 @@ body {
   padding: 100px 0 45px;
   color: #fff;
   overflow: hidden;
+	max-width: 1400px;
+  margin: 0 auto;
 }
 
 .hero .hero_wrap {
@@ -168,7 +176,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background: url("../images/bg_main.jpg")no-repeat center center;
+  background: url("../images/bg_main.jpg")no-repeat center top;
   background-size: cover;
 }
 .box_title {
